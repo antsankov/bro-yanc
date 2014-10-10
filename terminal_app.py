@@ -201,7 +201,7 @@ def term():
 		#this is if they are trying to press enter with nothing actually in the line
 		except IndexError:
 
-			print("Make sure your command has the proper arguments!")
+			print("Make sure your command has the proper arguments.")
 
 		#this is for when user is entering an invalid ip:port string
 		except ValueError:
@@ -309,6 +309,7 @@ def do_set_int(split_line,bro_connection):
 
 
 def do_demo(bro_connection):
+	bro_connection.connection.send("test1")
 	bro_connection.connection.send("bro_demo") 
 
 #This lists out the varaibles in the dictionary 
